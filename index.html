@@ -159,42 +159,146 @@
   <span class="dot" onclick="currentSlide(4)"></span>
   <span class="dot" onclick="currentSlide(5)"></span>
 </div>
+<div id="main-copy">
+  <h1 id="overview">学校概况</h1>
+  <p>禹城市华奥私立学校（简称禹城市华奥高中）创办于2002年，位于山东省禹城市禹石商贸街628号（徒骇河畔），是一所涵盖高中、初中的优质教育学校。</p >
+  <p>学校坚持“立德树人、为国育才，为学生谋未来”的办学宗旨，坚持“精品化、特色化、国际化”的办学定位，开设音乐、美术、体育等特长专业，实行寄宿制、封闭式管理。先后获评德州市文明校园、平安校园建设先进单位、禹城市“两新”组织党建工作示范单位、全国写字实验学校等荣誉。</p >
 
-<script>
-// 轮播图逻辑
-let slideIndex = 1;
-showSlides(slideIndex);
+  <!-- 轮播图样式 -->
+  <style>
+    .slideshow-container {
+      max-width: 800px;
+      position: relative;
+      margin: 20px auto;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .mySlides {
+      display: none;
+      text-align: center;
+      padding: 10px;
+    }
+    .slide-img {
+      max-width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.3s;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      margin-top: -22px;
+    }
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    .active {
+      background-color: #717171;
+    }
+  </style>
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+  <!-- 轮播图 HTML 结构 -->
+  <div class="slideshow-container">
+    <!-- 第1张照片 -->
+    <div class="mySlides fade">
+      < img src="图片1.png" class="slide-img" alt="校园照片1">
+    </div>
+    <!-- 第2张照片 -->
+    <div class="mySlides fade">
+      < img src="图片2.png" class="slide-img" alt="校园照片2">
+    </div>
+    <!-- 第3张照片 -->
+    <div class="mySlides fade">
+      < img src="图片3.png" class="slide-img" alt="校园照片3">
+    </div>
+    <!-- 第4张照片 -->
+    <div class="mySlides fade">
+      < img src="图片4.png" class="slide-img" alt="校园照片4">
+    </div>
+    <!-- 第5张照片（如果有第5张，就取消下面这行注释） -->
+    <!--
+    <div class="mySlides fade">
+      < img src="图片5.png" class="slide-img" alt="校园照片5">
+    </div>
+    -->
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+    <!-- 左右箭头 -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a >
+    <a class="next" onclick="plusSlides(1)">&#10095;</a >
+  </div>
+  <br>
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
-  
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
+  <!-- 小圆点指示器 -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <!-- 如果有第5张照片，就再加一行 -->
+    <!-- <span class="dot" onclick="currentSlide(5)"></span> -->
+  </div>
 
-// 自动切换
-setInterval(() => { plusSlides(1); }, 5000);
-</script>
+  <script>
+    // 轮播图逻辑
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+
+    // 自动切换
+    setInterval(() => { plusSlides(1); }, 5000);
+  </script>
+
+</div>
       <h1 id="teachers">师资力量</h1>
       <p>华奥实施“名校长、名师”战略，坚持专家治校。知名校长、原禹城一中业务校长王孟柱同志担任学校督学，北大资源艺术传媒学院特聘教授、中国冷香画派冰雪梅花领军人鲁秋先生担任学校名誉校长
 		  在教师聘用上，学校秉承“高工资才能聘到好老师，有大投入才有大产出”用人原则，在教师聘用和人才引进上不惜重金和大投入，全力打造一支学历高，理念超前，师德高尚，学识丰厚，业务精良，经验丰富，敬业爱生的优秀教师队伍。目前，高中任课教师本科及以上学历100%，硕士研究生占比达到25%以上，高中教师党员占比达到30%以上。2021年的高考他们将创造历史，优异的成绩单将会向世人昭示：这是一支实力派的团队，是一支有温度、有高度、有担当、可托付、可期待的卓越教育团队。
