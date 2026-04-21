@@ -40,27 +40,27 @@ h2{
     color:#004080;
     border-left:5px solid #0066cc;
     padding-left:12px;
-    margin-bottom:18px;
-    font-size:22px;
+    margin-bottom:20px;
 }
 p{margin-bottom:15px}
 ul{padding-left:22px;margin-bottom:15px}
 li{margin-bottom:6px}
 
-/* 图片样式 */
-.img-group{
+/* 图片样式 - 这次绝对不会再显示成文本！ */
+.img-row{
     display:flex;
     flex-wrap:wrap;
     gap:10px;
     justify-content:center;
     margin:20px 0;
 }
-.img-group img{
+.img-row img{
     width:220px;
     height:160px;
     object-fit:cover;
     border-radius:8px;
     background:#eee;
+    border:1px solid #ddd;
 }
 
 .footer{
@@ -69,14 +69,13 @@ li{margin-bottom:6px}
     color:#666;
     background:white;
     border-radius:12px;
-    margin-top:10px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- 顶部导航栏（项目栏） -->
+<!-- 顶部导航栏 -->
 <div class="nav">
     <a href=" ">首页</a >
     <a href="#gaikuang">学校概况</a >
@@ -94,15 +93,16 @@ li{margin-bottom:6px}
 <div class="section" id="home">
     <h2>首页</h2>
     <p>欢迎来到禹城市华奥私立学校官方网站。</p >
-    <p>我校创办于2002年，是集小学、初中、高中于一体的民办全日制学校，办学规范、管理严格、成绩优异。</p >
+    <p>我校创办于2002年，是集小学、初中、高中于一体的民办全日制学校，办学规范、管理严格、成绩优良。</p >
 </div>
 
-<!-- 学校概况 -->
+<!-- 学校概况 + 校园图片 -->
 <div class="section" id="gaikuang">
     <h2>学校概况</h2>
-    <p>禹城市华奥私立学校位于山东省禹城市禹石商贸街628号，徒骇河畔，环境优美、交通便利。</p >
-    <p>学校占地60余亩，现有师生1300余人，实行寄宿制、封闭式管理，校风严谨。</p >
-    <div class="img-group">
+    <p>禹城市华奥私立学校位于山东省禹城市禹石商贸街628号，徒骇河畔，是集高中、初中、小学于一体的民办全日制学校。</p >
+    <p>学校占地60余亩，现有师生1300余人，实行封闭式寄宿管理，校风严谨、环境优美。</p >
+    <!-- 重点：图片被包裹在 .img-row 里，不会再被当成文本！ -->
+    <div class="img-row">
         < img src="图片1.png" alt="校园">
         < img src="图片2.png" alt="校园">
         < img src="图片3.png" alt="校园">
@@ -116,10 +116,10 @@ li{margin-bottom:6px}
     <ul>
         <li>小班教学，每班不超过44人</li>
         <li>开设日语、俄语零起点高考班</li>
-        <li>美术、音乐、舞蹈、体育特色培养</li>
+        <li>美术、音乐、舞蹈、体育艺体特色培养</li>
         <li>分层教学、精准辅导、低进高出</li>
     </ul>
-    <div class="img-group">
+    <div class="img-row">
         < img src="日语.png" alt="日语班">
         < img src="书法.png" alt="书法">
         < img src="美术1.png" alt="美术">
@@ -132,7 +132,7 @@ li{margin-bottom:6px}
     <h2>师资力量</h2>
     <p>专家治校，名师执教。原禹城一中校长王孟柱担任督学，著名书画家鲁秋担任名誉校长。</p >
     <p>教师本科率100%，研究生占比25%以上，教学经验丰富。</p >
-    <div class="img-group">
+    <div class="img-row">
         < img src="校长1.png" alt="校长">
         < img src="校长2.png" alt="校长">
         < img src="外教1.png" alt="外教">
@@ -153,7 +153,7 @@ li{margin-bottom:6px}
 <div class="section" id="shenghuo">
     <h2>校园生活</h2>
     <p>宿舍配备空调、洗浴、洗衣机；食堂食材新鲜；校园活动丰富。</p >
-    <div class="img-group">
+    <div class="img-row">
         < img src="校会.png" alt="校会">
         < img src="汇演.png" alt="文艺汇演">
         < img src="饭堂1.png" alt="食堂">
@@ -170,9 +170,9 @@ li{margin-bottom:6px}
         <li>全国写字实验学校</li>
         <li>禹城市教育教学先进单位</li>
     </ul>
-    <div class="img-group">
+    <div class="img-row">
         < img src="学校荣誉.png" alt="荣誉">
-        < img src="学生荣誉.png" alt="荣誉">
+        < img src="学生荣誉.png" alt="学生荣誉">
     </div>
 </div>
 
@@ -185,7 +185,7 @@ li{margin-bottom:6px}
 </div>
 
 <div class="footer">
-禹城市华奥私立学校 © 2026 版权所有
+    禹城市华奥私立学校 © 2026 版权所有
 </div>
 
 </div>
