@@ -118,46 +118,82 @@
 学校实行专家治校，校长由原禹城一中业务校长王孟柱担任，名誉校长由北大资源艺术传媒学院特聘教授、中国冷香画派冰雪梅花画家鲁秋担任。学校设有名师工作室2个，教研团队11个。政治教研组长李冬雪在2024年获得禹城市中小学道德与法治教学比赛二等奖，地理教研组长李俊苗曾连续获得统考优秀教师。学校实行小班额教学，每班人数不超过44人，开设有日语、俄语等小语种课程，实行高中零起点教学模式，并设有美术、书法、音乐、舞蹈、服装表演、空乘、体育等艺体专业课程。学校设立华奥国际班，该班已被英国牛津国际认证中心确定为“牛津国际AQA考试国际考点”。学校采用分层教学模式，实行寄宿制、封闭式管理，禁止学生携带电子通讯产品入校。学生宿舍配备洗浴室、空调、洗衣机、吹风机等设施，食堂使用当日食材，后厨操作透明。学校实行“青蓝工程”教师培养和奖学、助学制度。
 </p>
 <style>
+/* 轮播图样式 */
 .slideshow-container { max-width: 800px; position: relative; margin: auto; border-radius: 8px; overflow: hidden; }
-.mySlides { display: none; }
-.slide-img { width: 100%; height: 400px; object-fit: cover; }
-.prev, .next { cursor: pointer; position: absolute; top: 50%; padding: 16px; color: white; background: rgba(0,0,0,0.5); border-radius: 3px; }
+.mySlides { display: none; text-align: center; }
+.slide-img { max-width: 100%; height: 300px; object-fit: cover; }
+.prev, .next { cursor: pointer; position: absolute; top: 50%; padding: 16px; color: white; background: rgba(0,0,0,0.5); border-radius: 3px; user-select: none; }
 .next { right: 0; }
-.dot { cursor: pointer; height: 12px; width: 12px; margin: 5px; background: #bbb; border-radius: 50%; display: inline-block; }
-.active { background: #717171; }
+.dot { cursor: pointer; height: 12px; width: 12px; margin: 0 5px; background-color: #bbb; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease; }
+.active { background-color: #717171; }
 </style>
 
 <div class="slideshow-container">
-  <div class="mySlides">< img src="图片1.png" class="slide-img" alt="照片1"></div>
-  <div class="mySlides">< img src="图片2.png" class="slide-img" alt="照片2"></div>
-  <div class="mySlides">< img src="图片3.png" class="slide-img" alt="照片3"></div>
-	<div class="mySlides">< img src="图片4.png" class="slide-img" alt="照片4"></div>
-	<div class="mySlides">< img src="图片5.png" class="slide-img" alt="照片5"></div>
+  <!-- 第1张照片 -->
+  <div class="mySlides fade">
+    < img src="图片1.png" class="slide-img" alt="校园照片1">
+  </div>
+  <!-- 第2张照片 -->
+  <div class="mySlides fade">
+    < img src="图片2.png" class="slide-img" alt="校园照片2">
+  </div>
+  <!-- 第3张照片 -->
+  <div class="mySlides fade">
+    < img src="图片3.png" class="slide-img" alt="校园照片3">
+  </div>
+  <!-- 第4张照片 -->
+  <div class="mySlides fade">
+    < img src="图片4.png" class="slide-img" alt="校园照片4">
+  </div>
+  
+  <!-- 左右箭头 -->
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a >
   <a class="next" onclick="plusSlides(1)">&#10095;</a >
 </div>
-<div style="text-align:center;">
+
+<!-- 底部小圆点 -->
+<div style="text-align:center; margin-top: 10px;">
   <span class="dot" onclick="currentSlide(1)"></span>
   <span class="dot" onclick="currentSlide(2)"></span>
   <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
 </div>
 
 <script>
+// 轮播图逻辑
 let slideIndex = 1;
 showSlides(slideIndex);
-function plusSlides(n) { showSlides(slideIndex += n); }
-function currentSlide(n) { showSlides(slideIndex = n); }
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
 function showSlides(n) {
+  let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) slideIndex = 1;
-  if (n < 1) slideIndex = slides.length;
-  for (let i=0; i<slides.length; i++) slides[i].style.display = "none";
-  for (let i=0; i<dots.length; i++) dots[i].className = dots[i].className.replace(" active", "");
+  
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+  
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
-setInterval(() => plusSlides(1), 5000);
+
+// 自动切换
+setInterval(() => { plusSlides(1); }, 5000);
 </script>
       <h1 id="teachers">师资力量</h1>
       <p>华奥实施“名校长、名师”战略，坚持专家治校。知名校长、原禹城一中业务校长王孟柱同志担任学校督学，北大资源艺术传媒学院特聘教授、中国冷香画派冰雪梅花领军人鲁秋先生担任学校名誉校长
