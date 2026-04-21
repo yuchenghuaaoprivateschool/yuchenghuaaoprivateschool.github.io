@@ -3,125 +3,185 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>禹城市华奥私立学校 - 官方介绍</title>
+<title>禹城市华奥私立学校</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft YaHei",sans-serif}
-body{background:#f7f8fa;color:#333;line-height:1.9}
+body{background:#f7f9fc;color:#333;line-height:1.8}
+
+/* 导航栏 */
+.nav{
+    background:#004080;
+    padding:15px 0;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+.nav a{
+    color:white;
+    margin:0 12px;
+    text-decoration:none;
+    font-size:15px;
+}
+.nav a:hover{text-decoration:underline}
+
+/* 容器 */
 .container{max-width:1000px;margin:0 auto;padding:20px}
-header{background:#1e407c;color:#fff;padding:36px 20px;text-align:center;border-radius:8px}
-header h1{font-size:28px;margin-bottom:8px}
-header p{font-size:16px;opacity:.95}
-.section{background:#fff;padding:28px;margin:22px 0;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
-h2{font-size:22px;color:#1e407c;border-left:5px solid #3b82f6;padding-left:12px;margin-bottom:16px}
-p{margin-bottom:14px;font-size:16px;text-align:justify}
-ul{padding-left:22px;margin-bottom:16px}
+
+/* 板块样式 */
+.section{
+    background:white;
+    padding:30px;
+    margin:25px 0;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.05);
+}
+h2{
+    color:#004080;
+    border-left:5px solid #0066cc;
+    padding-left:12px;
+    margin-bottom:18px;
+    font-size:22px;
+}
+p{margin-bottom:15px}
+ul{padding-left:22px;margin-bottom:15px}
 li{margin-bottom:6px}
-.footer{text-align:center;padding:24px;color:#666;background:#fff;border-radius:8px;margin-top:10px}
+
+/* 图片样式 */
+.img-group{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    justify-content:center;
+    margin:20px 0;
+}
+.img-group img{
+    width:220px;
+    height:160px;
+    object-fit:cover;
+    border-radius:8px;
+    background:#eee;
+}
+
+.footer{
+    text-align:center;
+    padding:25px;
+    color:#666;
+    background:white;
+    border-radius:12px;
+    margin-top:10px;
+}
 </style>
 </head>
+
 <body>
 
+<!-- 顶部导航栏（项目栏） -->
+<div class="nav">
+    <a href=" ">首页</a >
+    <a href="#gaikuang">学校概况</a >
+    <a href="#tese">办学特色</a >
+    <a href="#shizi">师资力量</a >
+    <a href="#chengguo">办学成果</a >
+    <a href="#shenghuo">校园生活</a >
+    <a href="#rongyu">学校荣誉</a >
+    <a href="#zhaosheng">招生信息</a >
+</div>
+
 <div class="container">
-<header>
-<h1>禹城市华奥私立学校</h1>
-<p>为党育人 · 为国育才 · 为学生谋未来</p >
-</header>
 
-<div class="section">
-<h2>学校概况</h2>
-<p>禹城市华奥私立学校（简称禹城华奥高中）创办于2002年，是<strong>禹城市第一所民办普通高中</strong>，位于山东省禹城市禹石商贸街628号（徒骇河畔），环境优雅、交通便利，是一所集<strong>高中、初中、小学</strong>于一体的民办全日制学校。</p >
-<p>学校占地60余亩，设计规模34个教学班，现有在校师生1300余人，2018年经德州市教体局批准正式举办普通高中教育，办学历史逾20年，是德州市影响力较强的优质民办学校之一。</p >
-<p>学校以<strong>诚信博学</strong>为校训，坚持<strong>精品化、特色化、国际化</strong>办学定位，实行<strong>寄宿制、封闭式管理</strong>，致力于培养身心健康、全面发展、适应社会的新时代人才。</p >
+<!-- 首页 -->
+<div class="section" id="home">
+    <h2>首页</h2>
+    <p>欢迎来到禹城市华奥私立学校官方网站。</p >
+    <p>我校创办于2002年，是集小学、初中、高中于一体的民办全日制学校，办学规范、管理严格、成绩优异。</p >
 </div>
 
-<div class="section">
-<h2>办学理念与特色</h2>
-<p>学校秉承<strong>低进高出、因材施教</strong>的办学理念，从最后一名学生抓起，让基础薄弱学生也能实现升学突破。</p >
-<ul>
-<li>小班额教学：每班不超过44人，全员关注、精准辅导</li>
-<li>分层分类教学：根据基础动态调整，个性化培养</li>
-<li>先学后教、当堂训练：高效课堂模式，提升成绩显著</li>
-<li>小语种高考：开设<strong>日语、俄语零起点班</strong>，替代英语参加高考，为英语薄弱学生开辟捷径</li>
-<li>艺体特色：美术、书法、音乐、舞蹈、体育、空乘等专业课程</li>
-<li>国际教育：设华奥国际班，为牛津国际AQA考试国际考点，对接海外名校</li>
-</ul>
+<!-- 学校概况 -->
+<div class="section" id="gaikuang">
+    <h2>学校概况</h2>
+    <p>禹城市华奥私立学校位于山东省禹城市禹石商贸街628号，徒骇河畔，环境优美、交通便利。</p >
+    <p>学校占地60余亩，现有师生1300余人，实行寄宿制、封闭式管理，校风严谨。</p >
+    <div class="img-group">
+        < img src="图片1.png" alt="校园">
+        < img src="图片2.png" alt="校园">
+        < img src="图片3.png" alt="校园">
+        < img src="图片4.png" alt="校园">
+    </div>
 </div>
 
-<div class="section">
-<h2>师资力量</h2>
-<p>学校实施<strong>名校长+名师</strong>战略，坚持专家治校，重金打造高水平教师队伍。</p >
-<p><strong>督学：王孟柱</strong> 原禹城一中业务校长，拥有三十余年教育管理经验。</p >
-<p><strong>名誉校长：鲁秋</strong> 北大资源艺术传媒学院特聘教授、中国冷香画派领军人物。</p >
-<ul>
-<li>高中教师本科及以上学历<strong>100%</strong></li>
-<li>硕士研究生占比<strong>25%以上</strong></li>
-<li>党员教师占比<strong>30%以上</strong></li>
-<li>拥有名师工作室2个、专业教研团队11个</li>
-</ul>
+<!-- 办学特色 -->
+<div class="section" id="tese">
+    <h2>办学特色</h2>
+    <ul>
+        <li>小班教学，每班不超过44人</li>
+        <li>开设日语、俄语零起点高考班</li>
+        <li>美术、音乐、舞蹈、体育特色培养</li>
+        <li>分层教学、精准辅导、低进高出</li>
+    </ul>
+    <div class="img-group">
+        < img src="日语.png" alt="日语班">
+        < img src="书法.png" alt="书法">
+        < img src="美术1.png" alt="美术">
+        < img src="实验.png" alt="实验">
+    </div>
 </div>
 
-<div class="section">
-<h2>办学成果与升学成绩</h2>
-<p>学校连续多年创造<strong>低进高出</strong>的升学奇迹，办学成绩稳居市民办学校前列。</p >
-<ul>
-<li>2021年首届高考：265人参考，本科上线32人</li>
-<li>2022年高考：287人参考，本科上线93人，较上年翻两番</li>
-<li>2023年：学生刘洋以641.7分考入<strong>211海南大学</strong></li>
-<li>2021—2023年艺体零基础本科上线<strong>269人</strong></li>
-<li>多名学生获山东省体育专业高考满分、全市第一名</li>
-</ul>
-<p>毕业生升入山东中医药大学、山东艺术学院、山东建筑大学、鲁东大学、上海体育学院、海南大学等省内外知名高校。</p >
+<!-- 师资力量 -->
+<div class="section" id="shizi">
+    <h2>师资力量</h2>
+    <p>专家治校，名师执教。原禹城一中校长王孟柱担任督学，著名书画家鲁秋担任名誉校长。</p >
+    <p>教师本科率100%，研究生占比25%以上，教学经验丰富。</p >
+    <div class="img-group">
+        < img src="校长1.png" alt="校长">
+        < img src="校长2.png" alt="校长">
+        < img src="外教1.png" alt="外教">
+    </div>
 </div>
 
-<div class="section">
-<h2>校园管理与生活保障</h2>
-<p>学校实行<strong>全封闭、寄宿制管理</strong>，严禁携带手机等电子产品，校风严谨、纪律严明。</p >
-<ul>
-<li>宿舍配备空调、洗浴间、洗衣机、吹风机</li>
-<li>食堂当日食材、透明后厨，安全卫生</li>
-<li>24小时值班管理，安全监控全覆盖</li>
-<li>实行奖学金、助学金制度，奖励面达年级10%</li>
-<li>青蓝工程助力教师成长，教学质量持续提升</li>
-</ul>
+<!-- 办学成果 -->
+<div class="section" id="chengguo">
+    <h2>办学成果</h2>
+    <ul>
+        <li>2023年学生考入211海南大学</li>
+        <li>艺体本科上线人数连续三年突破260人</li>
+        <li>多名学生获山东省体育高考满分</li>
+    </ul>
 </div>
 
-<div class="section">
-<h2>校园文化与活动</h2>
-<p>学校文化浓厚，活动丰富，全面提升学生综合素质。</p >
-<ul>
-<li>开学典礼、年度表彰大会、元旦文艺汇演</li>
-<li>体育节、艺术节、学科竞赛、社团活动</li>
-<li>足球、篮球、田径等特色运动队</li>
-<li>严格管理与人文关怀并重，打造有温度的校园</li>
-</ul>
+<!-- 校园生活 -->
+<div class="section" id="shenghuo">
+    <h2>校园生活</h2>
+    <p>宿舍配备空调、洗浴、洗衣机；食堂食材新鲜；校园活动丰富。</p >
+    <div class="img-group">
+        < img src="校会.png" alt="校会">
+        < img src="汇演.png" alt="文艺汇演">
+        < img src="饭堂1.png" alt="食堂">
+        < img src="生活1.png" alt="生活">
+    </div>
 </div>
 
-<div class="section">
-<h2>所获荣誉</h2>
-<p>学校先后荣获多项国家、省、市级荣誉：</p >
-<ul>
-<li>德州市文明单位</li>
-<li>全国青少年校园足球特色学校</li>
-<li>全国写字实验学校</li>
-<li>禹城市教育教学先进单位</li>
-<li>平安校园建设先进单位</li>
-<li>德州市十佳民办学校党组织</li>
-<li>禹城市“两新”组织党建示范单位</li>
-<li>山东鲁能泰山足球学校人才输送基地</li>
-</ul>
+<!-- 学校荣誉 -->
+<div class="section" id="rongyu">
+    <h2>学校荣誉</h2>
+    <ul>
+        <li>德州市文明单位</li>
+        <li>全国青少年校园足球特色学校</li>
+        <li>全国写字实验学校</li>
+        <li>禹城市教育教学先进单位</li>
+    </ul>
+    <div class="img-group">
+        < img src="学校荣誉.png" alt="荣誉">
+        < img src="学生荣誉.png" alt="荣誉">
+    </div>
 </div>
 
-<div class="section">
-<h2>招生信息</h2>
-<p><strong>招生对象：</strong>德州市各县市区初三毕业生</p >
-<p><strong>学校代码：</strong>3714821501</p >
-<p><strong>收费标准（每学期）：</strong></p >
-<ul>
-<li>学费：7800元</li>
-<li>住宿费：300元</li>
-</ul>
-<p>开设：文化班、日语班、俄语班、美术班、音乐班、舞蹈班、体育班。</p >
-<p>艺体特长生可适当降低分数线录取。</p >
+<!-- 招生信息 -->
+<div class="section" id="zhaosheng">
+    <h2>招生信息</h2>
+    <p><strong>招生对象：</strong>德州市初三毕业生</p >
+    <p><strong>学校代码：</strong>3714821501</p >
+    <p><strong>学费：</strong>7800元/学期 ｜ <strong>住宿费：</strong>300元/学期</p >
 </div>
 
 <div class="footer">
